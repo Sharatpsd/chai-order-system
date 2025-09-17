@@ -28,8 +28,7 @@ A **modern, responsive Django web application** for tea lovers. Explore flavors,
 **Contact Section**  
 ![Contact Form](https://drive.google.com/uc?export=view&id=1uiQLo25OnFIsQZbESucOWK5mMlKSYFpI)
 
-**Order Now Interaction (GIF example)**  
-![Order Now](https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif)  <!-- Replace with your own GIF -->
+
 
 ---
 
