@@ -1,6 +1,6 @@
 # 🍵 Chai Order System
 
-![Chai Banner](https://drive.google.com/uc?export=view&id=16_PpBlcL6r9YygV8mFB0pwF-AmHMHKsb)
+
 
 A **modern, responsive Django web application** for tea lovers. Explore flavors, place orders, and contact the team—all in one cozy platform. ☕💛
 
