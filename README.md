@@ -20,13 +20,13 @@ A **modern, responsive Django web application** for tea lovers. Explore flavors,
 ## 🖼️ Screenshots
 
 **Hero Section**  
-![Hero Section](https://drive.google.com/uc?export=view&id=16_PpBlcL6r9YygV8mFB0pwF-AmHMHKsb)
+![Hero Section](https://drive.google.com/file/d/1Q78rcnkQsxs9d4c2O1W_ko0Rtg2eOhk6/view?usp=sharing)
 
 **Flavors Section**  
-![Chai Flavors](https://drive.google.com/uc?export=view&id=1vsLpPuSNO16Oc0ySSxqvCiczHsi6AF6l)
+![Chai Flavors](https://drive.google.com/file/d/1TMqAruWGIaTsfacGX6HMDhXKlpjte1MV/view?usp=sharing)
 
 **Contact Section**  
-![Contact Form](https://drive.google.com/uc?export=view&id=1uiQLo25OnFIsQZbESucOWK5mMlKSYFpI)
+![https://drive.google.com/file/d/1u2loSJZ4l90mXFSKVcSKry2_Z0qifoX9/view?usp=sharing)
 
 
 
