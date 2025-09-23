@@ -2,6 +2,8 @@ from pathlib import Path
 import os
 
 
+PORT = int(os.environ.get("PORT", 10000))
+
 SECRET_KEY = 'django-insecure-2mk*y+a+%rlt8i%a*k6^+7@@&c+18(#bl9(uor7$-$2^y)&m!p'
 DEBUG = False
 
