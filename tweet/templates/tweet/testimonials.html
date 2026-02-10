@@ -1,20 +1,165 @@
+{% load static %}
+
 <section id="testimonials" class="testimonial-section">
-    <div class="container">
-        <h2>What Our Customers Say</h2>
 
-        <div class="testimonial">
-            <p>"The best chai I've ever tasted! Warm, comforting, and full of flavor."</p>
-            <h4>- Ayesha K.</h4>
+
+<style>
+/* TESTIMONIALS – Premium Dark Chai Vibe (matches About & Menu) */
+.testimonial-section {
+    padding: 130px 5% 150px;
+    background: linear-gradient(135deg, #2b170a 0%, #3a1f0e 50%, #241309 100%);
+    position: relative;
+    overflow: hidden;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: #f5efe6;
+}
+
+.testimonial-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.12;
+    z-index: 1;
+}
+
+.testimonial-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+.testimonial-title {
+    text-align: center;
+    font-size: clamp(2.6rem, 5.5vw, 3.9rem);
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    background: linear-gradient(90deg, #f2b84b, #ffdb7d, #f2b84b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 4rem;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.testimonial-card {
+    background: rgba(40,25,15,0.78);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(242,184,75,0.16);
+    border-radius: 22px;
+    padding: 2.4rem 2rem;
+    text-align: center;
+    box-shadow: 0 14px 38px rgba(0,0,0,0.5);
+    transition: all 0.6s cubic-bezier(0.34,1.1,0.1,1.2);
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+.testimonial-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-14px);
+    box-shadow: 0 32px 80px rgba(0,0,0,0.62), inset 0 0 0 1px rgba(242,184,75,0.25);
+}
+
+.testimonial-quote {
+    font-size: 1.12rem;
+    line-height: 1.78;
+    color: #e8d9c2;
+    margin-bottom: 1.8rem;
+    font-style: italic;
+    position: relative;
+}
+
+.testimonial-quote::before {
+    content: '“';
+    font-size: 4rem;
+    color: #f2b84b;
+    opacity: 0.3;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    font-family: Georgia, serif;
+}
+
+.testimonial-author {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #f2b84b;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .testimonial-grid { grid-template-columns: 1fr; gap: 28px; }
+    .testimonial-card { 
+        padding: 2rem 1.8rem;
+        transition: none;
+    }
+    .testimonial-card:hover {
+        transform: translateY(0);
+    }
+}
+/* FORCE ALL TEXT WHITE – ONE CLICK FIX */
+#testimonials,
+#testimonials * {
+    color: #ffffff !important;
+}
+
+
+
+
+</style>
+
+<div class="testimonial-container">
+    <h2 class="testimonial-title">What Our Customers Say</h2>
+
+    <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+            <p class="testimonial-quote">The best chai I've ever had in Dhaka! Every sip feels like a warm hug from home. The masala blend is absolutely perfect.</p>
+            <h4 class="testimonial-author">— Ayesha Rahman</h4>
         </div>
 
-        <div class="testimonial">
-            <p>"A perfect blend of spices. This chai brightens up my mornings."</p>
-            <h4>- Rohan P.</h4>
+        <div class="testimonial-card">
+            <p class="testimonial-quote">Finally found authentic ginger chai that actually has that strong kick! Been ordering every week. Pure addiction!</p>
+            <h4 class="testimonial-author">— Rohan Ahmed</h4>
         </div>
 
-        <div class="testimonial">
-            <p>"I love the Rose Cardamom flavor - so unique and aromatic!"</p>
-            <h4>- Sima T.</h4>
+        <div class="testimonial-card">
+            <p class="testimonial-quote">The Rose Cardamom Chai is pure magic. So elegant and aromatic — feels like luxury in a cup. My new evening ritual.</p>
+            <h4 class="testimonial-author">— Sima Khan</h4>
         </div>
+
+        <div class="testimonial-card">
+            <p class="testimonial-quote">Saffron Chai at this price? Unbelievable quality. Tastes premium, feels royal. Worth every taka!</p>
+            <h4 class="testimonial-author">— Faisal Karim</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p class="testimonial-quote">Their Turmeric Ginger blend helped me through cold season. Healthy + delicious = winning combo!</p>
+            <h4 class="testimonial-author">— Nadia Islam</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p class="testimonial-quote">Hands down the most authentic chai spot in town. Reminds me of my nani's kitchen. Keep it up!</p>
+            <h4 class="testimonial-author">— Arif Hossain</h4>
+        </div>
+
     </div>
-</section>
+</div>
