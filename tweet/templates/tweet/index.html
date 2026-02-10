@@ -1,48 +1,84 @@
+{% extends 'tweet/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chai Experience</title>
-    <link rel="stylesheet" href="{% static 'tweet/css/style.css' %}" />
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="{% static 'tweet/images/logo.png' %}" alt="Chai Logo">
-                <h1>CHAI</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Flavors</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-        </nav>
-    </header>
 
+{% block title %}Home - Chai Experience{% endblock %}
+
+{% block content %}
+    {% include 'tweet/hero.html' %}
+    {% include 'tweet/about.html' %}
+    {% include 'tweet/menu.html' %}
+    {% include 'tweet/testimonials.html' %}
+    {% include 'tweet/contact.html' %}
+{% endblock %}
+
+{% comment %} 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h2>Experience the Authentic Taste of Chai</h2>
-            <p>Handcrafted chai, blended with love and tradition.</p>
-            <a href="#menu" class="btn-primary">Explore Flavors</a>
-        </div>
-    </section>
+        <style>
+            .hero {
+                height: 100vh;
+                min-height: 720px;
+                background: url("{% static 'tweet/images/hero.jpg' %}") no-repeat center center;
+                background-size: cover;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: white;
+            }
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>About Our Chai</h2>
-            <p>Our chai is a perfect blend of aromatic spices and rich tea leaves sourced directly from local farms.</p>
-            <div class="about-image">
-                <img src="{% static 'tweet/images/hero.jpg' %}" alt="Spices and Chai">
-            </div>
+            .hero::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to bottom, rgba(0,0,0,0.38), rgba(44,20,0,0.68));
+                z-index: 1;
+            }
+
+            .hero-content {
+                position: relative;
+                z-index: 2;
+                max-width: 1100px;
+                padding: 0 30px;
+            }
+
+            .hero-content h1 {
+                font-size: clamp(4rem, 9vw, 7rem);
+                font-weight: 900;
+                margin-bottom: 1.4rem;
+                text-shadow: 0 8px 35px rgba(0,0,0,0.75);
+            }
+
+            .hero-content p {
+                font-size: clamp(1.4rem, 3vw, 1.8rem);
+                max-width: 780px;
+                margin: 0 auto 3rem;
+                opacity: 0.94;
+            }
+
+            .btn-primary {
+                background: #c1121f;
+                color: white;
+                padding: 18px 60px;
+                border-radius: 60px;
+                font-size: 1.4rem;
+                font-weight: 600;
+                text-decoration: none;
+                box-shadow: 0 12px 40px rgba(193,18,31,0.5);
+                transition: all 0.4s;
+            }
+
+            .btn-primary:hover {
+                background: #9e0d18;
+                transform: translateY(-6px);
+            }
+        </style>
+
+        <div class="hero-content">
+            <h1>Experience the Soul of Authentic Chai</h1>
+            <p>Handcrafted with love, tradition, and the finest spices from local farms in Bangladesh.</p>
+            <a href="#menu" class="btn-primary">Explore Our Flavors</a>
         </div>
     </section>
 
@@ -51,24 +87,14 @@
         <div class="container">
             <h2>Our Flavors</h2>
             <div class="menu-cards">
+                <!-- তোমার সব menu card এখানে পেস্ট করো -->
                 <div class="menu-card">
-                    <img src="{% static 'tweet/images/flavor1.jpg' %}" alt="Classic Masala Chai">
+                    <img src="{% static 'tweet/images/masala.jpg' %}" alt="Classic Masala Chai">
                     <h3>Classic Masala Chai</h3>
-                    <p>A traditional blend of cinnamon, cardamom, and ginger.</p>
-                    <button class="btn-order" data-flavor="Classic Masala Chai">Order Now</button>
+                    <p>Traditional spice blend with bold flavor.</p>
+                    <a href="/order?item=Masala" class="btn-order">Order Now</a>
                 </div>
-                <div class="menu-card">
-                    <img src="{% static 'tweet/images/flavor2.jpg' %}" alt="Turmeric Ginger Chai">
-                    <h3>Turmeric Ginger Chai</h3>
-                    <p>Boost your health with turmeric and fresh ginger in every cup.</p>
-                    <button class="btn-order" data-flavor="Turmeric Ginger Chai">Order Now</button>
-                </div>
-                <div class="menu-card">
-                    <img src="{% static 'tweet/images/flavor3.jpg' %}" alt="Rose Cardamom Chai">
-                    <h3>Rose Cardamom Chai</h3>
-                    <p>Floral sweetness combined with fragrant cardamom spices.</p>
-                    <button class="btn-order" data-flavor="Rose Cardamom Chai">Order Now</button>
-                </div>
+                <!-- ... ginger, cardamom, turmeric, rose, cinnamon, clove ইত্যাদি যোগ করো ... -->
             </div>
         </div>
     </section>
@@ -91,12 +117,12 @@
                     <h4>- Sima T.</h4>
                 </div>
             </div>
-            <button id="prevBtn">&#10094;</button>
-            <button id="nextBtn">&#10095;</button>
+            <button id="prevBtn">←</button>
+            <button id="nextBtn">→</button>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Contact Us</h2>
@@ -122,11 +148,4 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Chai Experience. All rights reserved.</p>
-    </footer>
-
-    <!-- JS should be here -->
-    <script src="{% static 'tweet/js/script.js' %}"></script>
-</body>
-</html>
+{% endblock %} {% endcomment %}

@@ -1,0 +1,107 @@
+{% load static %}
+
+<section class="hero-autumn">
+
+<style>
+/* ===== HERO BASE ===== */
+.hero-autumn{
+    height:100vh;
+    min-height:650px;
+    background:url("{% static 'tweet/images/hero.jpg' %}") no-repeat center center/cover;
+    position:relative;
+    display:flex;
+    align-items:center;
+    font-family:"Segoe UI",system-ui,-apple-system,sans-serif;
+    overflow:hidden;
+}
+
+/* WARM OVERLAY */
+.hero-autumn::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to right,
+        rgba(90,50,20,0.82),
+        rgba(90,50,20,0.42),
+        rgba(90,50,20,0.08)
+    );
+    z-index:1;
+}
+
+/* CONTENT */
+.hero-text{
+    position:relative;
+    z-index:2;
+    padding-left:8%;
+    max-width:620px;
+    color:#ffffff;
+    animation:heroFade 1.1s ease forwards;
+}
+
+/* TITLE – RESPONSIVE & BALANCED */
+.hero-text h1{
+    font-size:clamp(2.6rem, 4.5vw, 4.2rem);
+    font-weight:900;
+    line-height:1.08;
+    margin-bottom:1.2rem;
+    letter-spacing:-0.8px;
+    text-shadow:0 8px 22px rgba(0,0,0,.7);
+}
+
+/* PARAGRAPH */
+.hero-text p{
+    font-size:clamp(1rem, 1.4vw, 1.15rem);
+    line-height:1.75;
+    max-width:520px;
+    color:#f4efe6;
+    margin-bottom:2.4rem;
+}
+
+/* BUTTON */
+.hero-btn{
+    display:inline-block;
+    padding:14px 44px;
+    background:#f2b84b;
+    color:#4b260f;
+    font-weight:700;
+    font-size:1.05rem;
+    border-radius:50px;
+    text-decoration:none;
+    transition:.35s ease;
+}
+.hero-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 26px rgba(0,0,0,.35);
+}
+
+/* ANIMATION */
+@keyframes heroFade{
+    from{opacity:0;transform:translateX(-50px)}
+    to{opacity:1;transform:translateX(0)}
+}
+
+/* MOBILE TWEAK */
+@media(max-width:768px){
+    .hero-text{
+        padding:0 7%;
+    }
+}
+</style>
+
+<div class="hero-text">
+    <h1>
+        Autumn Vibes<br>
+        Authentic Chai
+    </h1>
+
+    <p>
+        Experience the warmth of handcrafted chai,
+        brewed with tradition, spices, and comfort
+        in every sip.
+    </p>
+
+    <a href="#menu" class="hero-btn">Explore Flavors</a>
+</div>
+
+</section>

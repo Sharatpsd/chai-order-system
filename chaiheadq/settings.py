@@ -5,7 +5,7 @@ import os
 
 
 SECRET_KEY = 'django-insecure-2mk*y+a+%rlt8i%a*k6^+7@@&c+18(#bl9(uor7$-$2^y)&m!p'
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
