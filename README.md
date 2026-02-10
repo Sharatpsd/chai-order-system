@@ -1,38 +1,52 @@
 # 🍵 Chai Order System
 
+A modern, cozy, and premium **Django web application** built for authentic chai lovers. Discover handcrafted flavors, place orders seamlessly, read heartfelt testimonials, and get in touch — all wrapped in a warm, dark, premium design inspired by real chai culture.
 
-
-A **modern, responsive Django web application** for tea lovers. Explore flavors, place orders, and contact the team—all in one cozy platform. ☕💛
+![Hero Section](https://drive.google.com/uc?export=view&id=1Q78rcnkQsxs9d4c2O1W_ko0Rtg2eOhk6)
+*(Beautiful hero with steaming chai vibe)*
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- 🌟 Browse multiple chai flavors with **beautiful images** and descriptions.  
-- 🛒 **Order Now** button: place orders directly into the database.  
-- 📱 Fully **responsive design** for mobile, tablet, and desktop.  
-- 📝 **Contact form** with live validation and email notifications.  
-- 💬 **Testimonials slider** to showcase happy customers.  
-- 🔗 Integrated **Django backend** with Orders and Contact models.  
+- 🌟 **Premium dark & warm UI** — elegant glassmorphism cards, golden accents, subtle textures
+- 🖼️ **Responsive product grid** — 20+ chai flavors with images, prices, discounts, ratings & badges
+- 🛒 **Order Now** flow — direct link to order placement (backend-ready)
+- 💬 **Customer Testimonials** section with staggered scroll animation
+- 📩 **Professional contact form** with validation-ready fields
+- 📱 **Fully mobile-first & responsive** design (desktop → tablet → mobile)
+- ⚡ **Lightweight animations** using pure CSS + IntersectionObserver
+- 🐍 **Clean Django backend** structure (models, views, templates ready)
 
 ---
 
 ## 🖼️ Screenshots
 
-**Hero Section**  
-![Hero Section](https://drive.google.com/uc?export=view&id=1Q78rcnkQsxs9d4c2O1W_ko0Rtg2eOhk6)
-
-**Flavors Section**  
-![Chai Flavors](https://drive.google.com/uc?export=view&id=1TMqAruWGIaTsfacGX6HMDhXKlpjte1MV)
-
-**Contact Section**  
-![Contact Section](https://drive.google.com/uc?export=view&id=1u2loSJZ4l90mXFSKVcSKry2_Z0qifoX9)
+| Section              | Preview                                                                 |
+|----------------------|-------------------------------------------------------------------------|
+| Hero                 | ![Hero](https://drive.google.com/uc?export=view&id=1Q78rcnkQsxs9d4c2O1W_ko0Rtg2eOhk6) |
+| About                | ![About](https://drive.google.com/uc?export=view&id=1uIEu6ULeuytYHhkWXEWFc_qDxMC_VLmS) |
+| Signature Flavors    | ![Flavors](https://drive.google.com/uc?export=view&id=1TMqAruWGIaTsfacGX6HMDhXKlpjte1MV) |
+| Testimonials         | ![Testimonials](https://drive.google.com/uc?export=view&id=1_DcnXcWcTPFFDFVENNMM-jc_1eueVUuo) |
+| Contact              | ![Contact](https://drive.google.com/uc?export=view&id=1wyzo8pgFw2jxg2eIds3vDSQlX128TO9o) |
+| Mobile View (Menu)   | ![Mobile Menu](https://drive.google.com/uc?export=view&id=1u2loSJZ4l90mXFSKVcSKry2_Z0qifoX9) |
 
 ---
 
-## 🛠️ Installation
+## 🛠️ Tech Stack
 
-1. **Clone the repository**:
+- **Backend**     : Django 4.2+
+- **Frontend**    : HTML5, CSS3 (custom), Vanilla JavaScript
+- **Styling**     : Pure CSS with glassmorphism, gradients, IntersectionObserver animations
+- **Fonts**       : System fonts (Segoe UI, system-ui)
+- **Images**      : Optimized static files (lazy loading)
+- **No external UI libraries** — lightweight & fast
+
+---
+
+## 🚀 Quick Start
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Sharatpsd/chai-order-system.git
