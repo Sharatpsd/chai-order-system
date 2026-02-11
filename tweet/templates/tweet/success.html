@@ -1,0 +1,28 @@
+{% extends 'tweet/base.html' %}
+{% load static %}
+
+{% block title %}Order Success - Chai Experience{% endblock %}
+
+{% block content %}
+
+<div class="container mx-auto px-6 py-24 text-center">
+    <div class="max-w-2xl mx-auto bg-[#2b170a]/80 backdrop-blur-lg border border-[#f2b84b]/20 rounded-2xl p-12 shadow-2xl">
+        <div class="text-8xl mb-8">🎉</div>
+        <h1 class="text-5xl font-bold text-[#f2b84b] mb-6">Thank You!</h1>
+        <p class="text-xl text-[#e8d9c2] mb-10">
+            Your order for <strong>{{ order.flavor.name }}</strong> has been successfully placed and paid.
+        </p>
+
+        <div class="bg-[#3a1f0e]/50 p-8 rounded-xl mb-10">
+            <p class="text-lg mb-4">Order ID: <strong>#{{ order.id }}</strong></p>
+            <p class="text-lg mb-4">Total Paid: <strong>৳{{ order.total_price }}</strong></p>
+            <p class="text-lg">We’ll prepare your chai with love and deliver it soon!</p>
+        </div>
+
+        <a href="{% url 'tweet:home' %}" class="inline-block px-10 py-4 bg-[#f2b84b] hover:bg-[#ffdb7d] text-[#3a1f0e] font-bold text-lg rounded-full transition">
+            Back to Home
+        </a>
+    </div>
+</div>
+
+{% endblock %}

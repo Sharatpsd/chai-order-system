@@ -1,3 +1,4 @@
+{% load socialaccount %}
 {% load static %}
 
 <section id="menu" class="menu-section">
@@ -453,6 +454,59 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".menu-card").forEach(card => {
     observer.observe(card);
+});
+</script>
+
+<script>
+// Order Now button logic with login check
+document.querySelectorAll('.order-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        const flavorId = this.getAttribute('data-flavor-id');
+
+        fetch("{% url 'tweet:create_order' %}", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: `flavor_id=${flavorId}&quantity=1`
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                Swal.fire({
+                    title: 'Order Placed!',
+                    text: data.message,
+                    icon: 'success',
+                    confirmButtonColor: '#f2b84b',
+                    confirmButtonText: 'Go to Checkout'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = `/checkout/${data.order_id}/`;
+                    }
+                });
+            } else if (data.status === 'login_required') {
+                Swal.fire({
+                    title: 'Please Sign In',
+                    text: 'You need to login first to place order.',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#f2b84b',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sign in with Google'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = "{% provider_login_url 'google' method='oauth2' %}";
+                    }
+                });
+            } else {
+                Swal.fire('Error', data.message || 'Something went wrong!', 'error');
+            }
+        })
+        .catch(() => {
+            Swal.fire('Error', 'Network error. Try again.', 'error');
+        });
+    });
 });
 </script>
 
