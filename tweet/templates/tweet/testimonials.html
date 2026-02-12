@@ -1,165 +1,119 @@
 {% load static %}
 
-<section id="testimonials" class="testimonial-section">
+<section id="testimonials" style="
+    padding:80px 5% 80px;
 
+    background:linear-gradient(135deg,#2b170a,#3a1f0e,#241309);
+    color:#ffffff;
+    font-family:system-ui,Segoe UI,sans-serif;
+">
 
-<style>
-/* TESTIMONIALS – Premium Dark Chai Vibe (matches About & Menu) */
-.testimonial-section {
-    padding: 130px 5% 150px;
-    background: linear-gradient(135deg, #2b170a 0%, #3a1f0e 50%, #241309 100%);
-    position: relative;
-    overflow: hidden;
-    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-    color: #f5efe6;
-}
+    <div style="max-width:1200px;margin:0 auto;">
 
-.testimonial-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(rgba(255,255,255,.04) 1px, transparent 1px);
-    background-size: 40px 40px;
-    opacity: 0.12;
-    z-index: 1;
-}
+        <h2 style="
+            text-align:center;
+            font-size:clamp(2rem,4vw,3rem);
+            font-weight:800;
+            color:#f2b84b;
+            margin-bottom:3rem;
+        ">
+            What Our Customers Say
+        </h2>
 
-.testimonial-container {
-    position: relative;
-    z-index: 2;
-    max-width: 1380px;
-    margin: 0 auto;
-}
+        <div style="
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:24px;
+        ">
 
-.testimonial-title {
-    text-align: center;
-    font-size: clamp(2.6rem, 5.5vw, 3.9rem);
-    font-weight: 800;
-    letter-spacing: -0.8px;
-    background: linear-gradient(90deg, #f2b84b, #ffdb7d, #f2b84b);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    margin-bottom: 4rem;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.7);
-}
+            <!-- 1 -->
+            <div style="background:rgba(40,25,15,0.95);border:1px solid rgba(242,184,75,0.2);border-radius:18px;padding:2rem;text-align:center;transition:transform .3s ease, box-shadow .3s ease;"
+                onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 15px 35px rgba(0,0,0,0.4)';"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
 
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-}
+                <p style="font-size:1rem;line-height:1.6;color:#e8d9c2;margin-bottom:1rem;font-style:italic;">
+                    The best chai I've ever had in Dhaka! Every sip feels like a warm hug from home.
+                </p>
+                <h4 style="font-weight:700;color:#f2b84b;">— Ayesha Rahman</h4>
+            </div>
 
-.testimonial-card {
-    background: rgba(40,25,15,0.78);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(242,184,75,0.16);
-    border-radius: 22px;
-    padding: 2.4rem 2rem;
-    text-align: center;
-    box-shadow: 0 14px 38px rgba(0,0,0,0.5);
-    transition: all 0.6s cubic-bezier(0.34,1.1,0.1,1.2);
-    opacity: 0;
-    transform: translateY(60px);
-}
+            <!-- 2 -->
+            <div style="background:rgba(40,25,15,0.95);border:1px solid rgba(242,184,75,0.2);border-radius:18px;padding:2rem;text-align:center;transition:transform .3s ease, box-shadow .3s ease;"
+                onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 15px 35px rgba(0,0,0,0.4)';"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
 
-.testimonial-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+                <p style="font-size:1rem;line-height:1.6;color:#e8d9c2;margin-bottom:1rem;font-style:italic;">
+                    Finally found authentic ginger chai that actually has that strong kick!
+                </p>
+                <h4 style="font-weight:700;color:#f2b84b;">— Rohan Ahmed</h4>
+            </div>
 
-.testimonial-card:hover {
-    transform: translateY(-14px);
-    box-shadow: 0 32px 80px rgba(0,0,0,0.62), inset 0 0 0 1px rgba(242,184,75,0.25);
-}
+            <!-- 3 -->
+            <div style="background:rgba(40,25,15,0.95);border:1px solid rgba(242,184,75,0.2);border-radius:18px;padding:2rem;text-align:center;transition:transform .3s ease, box-shadow .3s ease;"
+                onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 15px 35px rgba(0,0,0,0.4)';"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
 
-.testimonial-quote {
-    font-size: 1.12rem;
-    line-height: 1.78;
-    color: #e8d9c2;
-    margin-bottom: 1.8rem;
-    font-style: italic;
-    position: relative;
-}
+                <p style="font-size:1rem;line-height:1.6;color:#e8d9c2;margin-bottom:1rem;font-style:italic;">
+                    Rose Cardamom Chai is pure magic. Luxury in a cup.
+                </p>
+                <h4 style="font-weight:700;color:#f2b84b;">— Sima Khan</h4>
+            </div>
 
-.testimonial-quote::before {
-    content: '“';
-    font-size: 4rem;
-    color: #f2b84b;
-    opacity: 0.3;
-    position: absolute;
-    top: -20px;
-    left: -10px;
-    font-family: Georgia, serif;
-}
+            <!-- 4 -->
+            <div style="background:rgba(40,25,15,0.95);border:1px solid rgba(242,184,75,0.2);border-radius:18px;padding:2rem;text-align:center;transition:transform .3s ease, box-shadow .3s ease;"
+                onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 15px 35px rgba(0,0,0,0.4)';"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
 
-.testimonial-author {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #f2b84b;
-    margin: 0;
-}
+                <p style="font-size:1rem;line-height:1.6;color:#e8d9c2;margin-bottom:1rem;font-style:italic;">
+                    Saffron Chai tastes premium. Worth every taka!
+                </p>
+                <h4 style="font-weight:700;color:#f2b84b;">— Faisal Karim</h4>
+            </div>
 
-/* Responsive */
-@media (max-width: 1100px) {
-    .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
-}
+            <!-- 5 -->
+            <div style="background:rgba(40,25,15,0.95);border:1px solid rgba(242,184,75,0.2);border-radius:18px;padding:2rem;text-align:center;transition:transform .3s ease, box-shadow .3s ease;"
+                onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 15px 35px rgba(0,0,0,0.4)';"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
 
-@media (max-width: 768px) {
-    .testimonial-grid { grid-template-columns: 1fr; gap: 28px; }
-    .testimonial-card { 
-        padding: 2rem 1.8rem;
-        transition: none;
-    }
-    .testimonial-card:hover {
-        transform: translateY(0);
-    }
-}
-/* FORCE ALL TEXT WHITE – ONE CLICK FIX */
-#testimonials,
-#testimonials * {
-    color: #ffffff !important;
-}
+                <p style="font-size:1rem;line-height:1.6;color:#e8d9c2;margin-bottom:1rem;font-style:italic;">
+                    Turmeric Ginger blend helped me through cold season.
+                </p>
+                <h4 style="font-weight:700;color:#f2b84b;">— Nadia Islam</h4>
+            </div>
 
+            <!-- 6 -->
+            <div style="background:rgba(40,25,15,0.95);border:1px solid rgba(242,184,75,0.2);border-radius:18px;padding:2rem;text-align:center;transition:transform .3s ease, box-shadow .3s ease;"
+                onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 15px 35px rgba(0,0,0,0.4)';"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
 
+                <p style="font-size:1rem;line-height:1.6;color:#e8d9c2;margin-bottom:1rem;font-style:italic;">
+                    Most authentic chai spot in town. Reminds me of nani's kitchen.
+                </p>
+                <h4 style="font-weight:700;color:#f2b84b;">— Arif Hossain</h4>
+            </div>
 
+            <!-- 7 -->
+            <div style="background:rgba(40,25,15,0.95);border:1px solid rgba(242,184,75,0.2);border-radius:18px;padding:2rem;text-align:center;transition:transform .3s ease, box-shadow .3s ease;"
+                onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 15px 35px rgba(0,0,0,0.4)';"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
 
-</style>
+                <p style="font-size:1rem;line-height:1.6;color:#e8d9c2;margin-bottom:1rem;font-style:italic;">
+                    Almond Chai feels like café-level quality at home. Smooth and rich!
+                </p>
+                <h4 style="font-weight:700;color:#f2b84b;">— Tanvir Hasan</h4>
+            </div>
 
-<div class="testimonial-container">
-    <h2 class="testimonial-title">What Our Customers Say</h2>
+            <!-- 8 -->
+            <div style="background:rgba(40,25,15,0.95);border:1px solid rgba(242,184,75,0.2);border-radius:18px;padding:2rem;text-align:center;transition:transform .3s ease, box-shadow .3s ease;"
+                onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 15px 35px rgba(0,0,0,0.4)';"
+                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
 
-    <div class="testimonial-grid">
+                <p style="font-size:1rem;line-height:1.6;color:#e8d9c2;margin-bottom:1rem;font-style:italic;">
+                    Green Tea is my daily detox ritual now. Light, refreshing and fast delivery!
+                </p>
+                <h4 style="font-weight:700;color:#f2b84b;">— Farhana Jahan</h4>
+            </div>
 
-        <div class="testimonial-card">
-            <p class="testimonial-quote">The best chai I've ever had in Dhaka! Every sip feels like a warm hug from home. The masala blend is absolutely perfect.</p>
-            <h4 class="testimonial-author">— Ayesha Rahman</h4>
         </div>
-
-        <div class="testimonial-card">
-            <p class="testimonial-quote">Finally found authentic ginger chai that actually has that strong kick! Been ordering every week. Pure addiction!</p>
-            <h4 class="testimonial-author">— Rohan Ahmed</h4>
-        </div>
-
-        <div class="testimonial-card">
-            <p class="testimonial-quote">The Rose Cardamom Chai is pure magic. So elegant and aromatic — feels like luxury in a cup. My new evening ritual.</p>
-            <h4 class="testimonial-author">— Sima Khan</h4>
-        </div>
-
-        <div class="testimonial-card">
-            <p class="testimonial-quote">Saffron Chai at this price? Unbelievable quality. Tastes premium, feels royal. Worth every taka!</p>
-            <h4 class="testimonial-author">— Faisal Karim</h4>
-        </div>
-
-        <div class="testimonial-card">
-            <p class="testimonial-quote">Their Turmeric Ginger blend helped me through cold season. Healthy + delicious = winning combo!</p>
-            <h4 class="testimonial-author">— Nadia Islam</h4>
-        </div>
-
-        <div class="testimonial-card">
-            <p class="testimonial-quote">Hands down the most authentic chai spot in town. Reminds me of my nani's kitchen. Keep it up!</p>
-            <h4 class="testimonial-author">— Arif Hossain</h4>
-        </div>
-
     </div>
-</div>
+</section>

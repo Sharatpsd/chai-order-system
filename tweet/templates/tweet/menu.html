@@ -56,15 +56,16 @@
 /* Grid */
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
 }
 
 /* Card */
 .menu-card {
     position: relative;
     background: rgba(255,255,255,0.06);
-    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.04);
+
     border: 1px solid rgba(242,184,75,0.15);
     border-radius: 20px;
     overflow: hidden;
@@ -80,9 +81,9 @@
 }
 
 .menu-card:hover {
-    transform: translateY(-12px) scale(1.04);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.55), 0 0 0 2px rgba(242,184,75,0.3) inset;
+    transform: translateY(-6px);
 }
+
 
 .menu-card img {
     width: 100%;
@@ -209,7 +210,16 @@
         <!-- 1 -->
         <div class="menu-card">
             <span class="badge bestseller">Best Seller</span>
-            <img src="{% static 'tweet/images/masala.jpg' %}" alt="Classic Masala Chai">
+           <img 
+    src="{% static 'tweet/images/masala.jpg' %}" 
+    alt="Classic Masala Chai"
+    loading="lazy"
+    decoding="async"
+    width="400"
+    height="300"
+    class="w-full h-[220px] object-cover"
+/>
+
             <div class="card-content">
                 <h3 class="card-title">Classic Masala Chai</h3>
                 <p class="card-desc">Traditional spice blend with bold flavor</p>
@@ -219,7 +229,8 @@
                     <span class="discount-badge">-19%</span>
                 </div>
                 <div class="rating">★★★★★ <span>(4.9)</span></div>
-                <a href="/order?item=Masala" class="btn-order">Order Now</a>
+                <button class="btn-order order-btn" data-flavor-id="1">
+Order Now</a>
             </div>
         </div>
 
@@ -442,7 +453,7 @@
 
 <script>
 // Scroll reveal animation for cards
-const observer = new IntersectionObserver((entries) => {
+{% comment %} const observer = new IntersectionObserver((entries) => { {% endcomment %}
     entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
             setTimeout(() => {
