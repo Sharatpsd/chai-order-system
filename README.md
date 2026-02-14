@@ -2,7 +2,7 @@
 
 A modern, cozy, and premium **Django web application** built for authentic chai lovers. Discover handcrafted flavors, place orders seamlessly, read heartfelt testimonials, and get in touch — all wrapped in a warm, dark, premium design inspired by real chai culture.
 
-![Hero Section](https://drive.google.com/uc?export=view&id=1Q78rcnkQsxs9d4c2O1W_ko0Rtg2eOhk6)
+![Hero Section](https://drive.google.com/uc?export=view&id=1uIEu6ULeuytYHhkWXEWFc_qDxMC_VLmS)
 *(Beautiful hero with steaming chai vibe)*
 
 ---
@@ -25,10 +25,10 @@ A modern, cozy, and premium **Django web application** built for authentic chai 
 | Section              | Preview                                                                 |
 |----------------------|-------------------------------------------------------------------------|
 |  Hero                  | ![About](https://drive.google.com/uc?export=view&id=1uIEu6ULeuytYHhkWXEWFc_qDxMC_VLmS) |
-| Signature Flavors    | ![Flavors](https://drive.google.com/uc?export=view&id=1TMqAruWGIaTsfacGX6HMDhXKlpjte1MV) |
-| Testimonials         | ![Testimonials](https://drive.google.com/uc?export=view&id=1_DcnXcWcTPFFDFVENNMM-jc_1eueVUuo) |
-| Contact              | ![Contact](https://drive.google.com/uc?export=view&id=1wyzo8pgFw2jxg2eIds3vDSQlX128TO9o) |
-| Mobile View (Menu)   | ![Mobile Menu](https://drive.google.com/uc?export=view&id=1u2loSJZ4l90mXFSKVcSKry2_Z0qifoX9) |
+
+| About        | ![Testimonials](https://drive.google.com/uc?export=view&id=1_DcnXcWcTPFFDFVENNMM-jc_1eueVUuo) |
+| Signature flavors            | ![Contact](https://drive.google.com/uc?export=view&id=1wyzo8pgFw2jxg2eIds3vDSQlX128TO9o) |
+| Contact | ![Mobile Menu](https://drive.google.com/uc?export=view&id=1u2loSJZ4l90mXFSKVcSKry2_Z0qifoX9) |
 
 ---
 
