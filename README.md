@@ -24,8 +24,7 @@ A modern, cozy, and premium **Django web application** built for authentic chai 
 
 | Section              | Preview                                                                 |
 |----------------------|-------------------------------------------------------------------------|
-| Hero                 | ![Hero](https://drive.google.com/uc?export=view&id=1Q78rcnkQsxs9d4c2O1W_ko0Rtg2eOhk6) |
-| About                | ![About](https://drive.google.com/uc?export=view&id=1uIEu6ULeuytYHhkWXEWFc_qDxMC_VLmS) |
+|  Hero                  | ![About](https://drive.google.com/uc?export=view&id=1uIEu6ULeuytYHhkWXEWFc_qDxMC_VLmS) |
 | Signature Flavors    | ![Flavors](https://drive.google.com/uc?export=view&id=1TMqAruWGIaTsfacGX6HMDhXKlpjte1MV) |
 | Testimonials         | ![Testimonials](https://drive.google.com/uc?export=view&id=1_DcnXcWcTPFFDFVENNMM-jc_1eueVUuo) |
 | Contact              | ![Contact](https://drive.google.com/uc?export=view&id=1wyzo8pgFw2jxg2eIds3vDSQlX128TO9o) |
