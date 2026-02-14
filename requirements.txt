@@ -21,7 +21,7 @@ stripe==11.3.0
 
 # Database
 
-psycopg[binary]==3.2.1
+psycopg[binary]==3.3.2
 dj-database-url==2.2.0
 
 
