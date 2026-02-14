@@ -1,33 +1,30 @@
-# Core Django & dependencies
-Django==4.2.16          # Latest 4.2 LTS (security updates + stable)
+# Core Django
+Django==4.2.16
 asgiref==3.8.1
 sqlparse==0.5.1
 
-# Production server (Render-এ gunicorn ব্যবহার করা হয়)
+# Production server
 gunicorn==23.0.0
 
-# Static files handling in production (Render-এ WhiteNoise দরকার)
+# Static files
 whitenoise==6.7.0
 
-# Environment variables (সিকিউর কীগুলো .env ফাইলে রাখার জন্য)
+# Environment variables
 python-decouple==3.8
 
-# Authentication - Google Login (django-allauth)
+# Authentication
 django-allauth==0.63.6
+PyJWT==2.9.0
 
-# Payment - Stripe integration
+# Payment
 stripe==11.3.0
 
-# PostgreSQL driver (Render-এ ডিফল্ট PostgreSQL ব্যবহার করলে দরকার)
+# Database
 psycopg2-binary==2.9.9
+dj-database-url==2.2.0
 
-# Optional but recommended (admin improvement, messages, etc.)
-django-extensions==3.2.3           # extra admin commands
-django-cleanup==9.0.0              # uploaded files auto delete
-
-# For better form handling & security
-django-crispy-forms==2.3           # beautiful forms (optional but nice)
-crispy-bootstrap5==2024.2          # bootstrap5 support for crispy
-
-# Development tools (local-এ ব্যবহার করার জন্য, production-এ লাগবে না)
-# django-debug-toolbar==4.4.6      # uncomment করলে local-এ debug দেখা যাবে
+# Utilities
+django-extensions==3.2.3
+django-cleanup==9.0.0
+django-crispy-forms==2.3
+crispy-bootstrap5==2024.2

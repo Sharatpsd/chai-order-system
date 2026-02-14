@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from tweet.views import stripe_webhook
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -13,8 +14,8 @@ urlpatterns = [
     # Allauth (Google login, signup, logout etc.)
     path('accounts/', include('allauth.urls')),
 
-    # Stripe webhook (পরে যোগ করব)
-    # path('webhook/stripe/', views.stripe_webhook, name='stripe_webhook'),
+   path('stripe/webhook/', stripe_webhook, name='stripe_webhook'),
+
 ]
 
 # Development-এ media files serve করার জন্য

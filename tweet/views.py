@@ -89,9 +89,19 @@ def checkout(request, order_id):
 
     return render(request, 'tweet/checkout.html', context)
 
+import stripe
+from django.conf import settings
+from django.http import JsonResponse, HttpResponse
+from django.shortcuts import get_object_or_404
+from django.urls import reverse
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
+from django.contrib.auth.decorators import login_required
+from .models import Order
+
 
 # -----------------------
-# Stripe Payment Processing
+# Create Payment Intent
 # -----------------------
 
 @require_POST
@@ -113,26 +123,20 @@ def process_payment(request, order_id):
             confirm=True,
             description=f'Order #{order.id}',
             metadata={
-                'order_id': order.id,
-                'user_id': request.user.id
+                'order_id': str(order.id),
+                'user_id': str(request.user.id)
             }
         )
 
-        if intent.status in ['succeeded', 'processing']:
-            order.is_paid = True
-            order.payment_id = intent.id
-            order.status = 'paid' if intent.status == 'succeeded' else 'processing'
-            order.save()
-
-            return JsonResponse({
-                'success': True,
-                'redirect': reverse('tweet:order_success', args=[order.id])
-            })
+        # DO NOT mark as paid here
+        order.payment_id = intent.id
+        order.status = 'processing'
+        order.save()
 
         return JsonResponse({
-            'success': False,
-            'error': 'Payment failed'
-        }, status=400)
+            'success': True,
+            'client_secret': intent.client_secret
+        })
 
     except stripe.error.CardError as e:
         return JsonResponse({'success': False, 'error': e.user_message}, status=400)
@@ -142,6 +146,50 @@ def process_payment(request, order_id):
 
     except Exception:
         return JsonResponse({'success': False, 'error': 'Server error'}, status=500)
+
+
+# -----------------------
+# Stripe Webhook (FINAL AUTHORITY)
+# -----------------------
+
+@csrf_exempt
+def stripe_webhook(request):
+    payload = request.body
+    sig_header = request.META.get('HTTP_STRIPE_SIGNATURE')
+
+    try:
+        event = stripe.Webhook.construct_event(
+            payload,
+            sig_header,
+            settings.STRIPE_WEBHOOK_SECRET
+        )
+    except Exception:
+        return HttpResponse(status=400)
+
+    if event['type'] == 'payment_intent.succeeded':
+        intent = event['data']['object']
+        order_id = intent['metadata'].get('order_id')
+
+        try:
+            order = Order.objects.get(id=order_id)
+            order.is_paid = True
+            order.status = 'paid'
+            order.save()
+        except Order.DoesNotExist:
+            pass
+
+    elif event['type'] == 'payment_intent.payment_failed':
+        intent = event['data']['object']
+        order_id = intent['metadata'].get('order_id')
+
+        try:
+            order = Order.objects.get(id=order_id)
+            order.status = 'failed'
+            order.save()
+        except Order.DoesNotExist:
+            pass
+
+    return HttpResponse(status=200)
 
 
 # -----------------------
