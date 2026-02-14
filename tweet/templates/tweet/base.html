@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Chai Experience - Authentic Handcrafted Chai{% endblock %}</title>
-
+  
+ 
     <!-- Favicon + Preload logo for no reload/lazy -->
     <link rel="icon" href="{% static 'tweet/images/logo.png' %}" type="image/png">
     <link rel="preload" href="{% static 'tweet/images/logo.png' %}" as="image">
@@ -36,15 +37,14 @@
                     CHAI
                 </span>
             </div>
+<ul class="hidden lg:flex items-center gap-10 xl:gap-12 text-base font-medium tracking-wide flex-1 justify-center">
+    <li><a href="#home" class="hover:text-[#f2b84b] transition-colors duration-300 hover:underline underline-offset-4">Home</a></li>
+    <li><a href="#about" class="hover:text-[#f2b84b] transition-colors duration-300 hover:underline underline-offset-4">About</a></li>
+    <li><a href="#menu" class="hover:text-[#f2b84b] transition-colors duration-300 hover:underline underline-offset-4">Flavors</a></li>
+    <li><a href="#testimonials" class="hover:text-[#f2b84b] transition-colors duration-300 hover:underline underline-offset-4">Testimonials</a></li>
+    <li><a href="#contact" class="hover:text-[#f2b84b] transition-colors duration-300 hover:underline underline-offset-4">Contact</a></li>
+</ul>
 
-            <!-- Desktop Menu – Centered & Clean -->
-            <ul class="hidden lg:flex items-center gap-10 xl:gap-12 text-base font-medium tracking-wide flex-1 justify-center">
-                <li><a href="{% url 'tweet:home' %}" class="hover:text-[#f2b84b] transition-colors duration-300 hover:underline underline-offset-4">Home</a></li>
-                <li><a href="{% url 'tweet:home' %}#about" class="hover:text-[#f2b84b] transition-colors duration-300 hover:underline underline-offset-4">About</a></li>
-                <li><a href="{% url 'tweet:home' %}#menu" class="hover:text-[#f2b84b] transition-colors duration-300 hover:underline underline-offset-4">Flavors</a></li>
-                <li><a href="{% url 'tweet:home' %}#testimonials" class="hover:text-[#f2b84b] transition-colors duration-300 hover:underline underline-offset-4">Testimonials</a></li>
-                <li><a href="{% url 'tweet:home' %}#contact" class="hover:text-[#f2b84b] transition-colors duration-300 hover:underline underline-offset-4">Contact</a></li>
-            </ul>
 
             <!-- Auth Section – Right Side -->
             <div class="hidden lg:flex items-center gap-6 min-w-[220px] justify-end">

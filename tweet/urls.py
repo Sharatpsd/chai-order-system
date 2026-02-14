@@ -18,9 +18,9 @@ urlpatterns = [
  
     path('checkout/<int:order_id>/', views.checkout, name='checkout'),
     path('order-success/<int:order_id>/', views.order_success, name='order_success'),
+# Contact
+path('contact/', views.contact, name='contact'),
+path('contact/submit/', views.contact_message, name='contact_submit'),
 
-    # Contact
-    path('contact/', views.contact, name='contact'),
-    path('contact/submit/', views.contact_message, name='contact_submit'),  # AJAX submit
 
 ]
