@@ -20,8 +20,10 @@ PyJWT==2.9.0
 stripe==11.3.0
 
 # Database
-psycopg2-binary==2.9.9
+
+psycopg[binary]==3.2.1
 dj-database-url==2.2.0
+
 
 # Utilities
 django-extensions==3.2.3
