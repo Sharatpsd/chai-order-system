@@ -23,6 +23,7 @@ stripe==11.3.0
 
 psycopg[binary]==3.3.2
 dj-database-url==2.2.0
+cryptography==42.0.8
 
 
 # Utilities
