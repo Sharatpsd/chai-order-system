@@ -1,4 +1,4 @@
-# 🍵 Chai Order System live - https://chai-order-system-5.onrender.com/
+🍵 **Live Demo:** [Chai Order System](https://chai-order-system-5.onrender.com/)
 
 A modern, cozy, and premium **Django web application** built for authentic chai lovers. Discover handcrafted flavors, place orders seamlessly, read heartfelt testimonials, and get in touch — all wrapped in a warm, dark, premium design inspired by real chai culture.
 
