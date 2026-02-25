@@ -1,53 +1,54 @@
-🍵 **Live Demo click :** [Chai Order System](https://chai-order-system-5.onrender.com/)
+# Chai Order System 🍵
 
-A modern, cozy, and premium **Django web application** built for authentic chai lovers. Discover handcrafted flavors, place orders seamlessly, read heartfelt testimonials, and get in touch — all wrapped in a warm, dark, premium design inspired by real chai culture.
+**Premium Django web application for authentic chai lovers**  
+Modern, cozy, dark-themed platform to discover handcrafted chai flavors, read real customer stories, and place orders with warmth and elegance.
 
-![Landing Page](assets/landing.png)
-*(Beautiful hero with steaming chai vibe)*
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-brightgreen?style=for-the-badge&logo=vercel)](https://chai-order-system-5.onrender.com/)
+
+![Hero Banner](assets/landing.png)  
+*Steaming hot chai experience – premium dark UI with golden accents*
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-- 🌟 **Premium dark & warm UI** — elegant glassmorphism cards, golden accents, subtle textures
-- 🖼️ **Responsive product grid** — 20+ chai flavors with images, prices, discounts, ratings & badges
-- 🛒 **Order Now** flow — direct link to order placement (backend-ready)
-- 💬 **Customer Testimonials** section with staggered scroll animation
-- 📩 **Professional contact form** with validation-ready fields
-- 📱 **Fully mobile-first & responsive** design (desktop → tablet → mobile)
-- ⚡ **Lightweight animations** using pure CSS + IntersectionObserver
-- 🐍 **Clean Django backend** structure (models, views, templates ready)
+- 🌟 Premium dark & warm aesthetic — glassmorphism cards, golden highlights, subtle chai-inspired textures  
+- 🖼️ Responsive product showcase — 20+ handcrafted chai flavors with prices, discounts, ratings & badges  
+- 🛒 **Order Now** flow — clean, backend-ready ordering experience  
+- 💬 Heartfelt customer testimonials with elegant staggered animations  
+- 📩 Professional contact form (validation-ready)  
+- 📱 Fully responsive & mobile-first design  
+- ⚡ Smooth, lightweight animations using pure CSS + Intersection Observer  
+- 🐍 Clean Django project structure — no heavy frontend frameworks
 
 ---
 
 ## 🖼️ Screenshots
 
-### 🏠 Landing Page
-![Landing Page](assets/landing.png)
+<table>
+<tr>
+<td><strong>Landing Page</strong><br><img src="assets/landing.png" width="100%"></td>
+<td><strong>About Section</strong><br><img src="assets/about.png" width="100%"></td>
+</tr>
+<tr>
+<td><strong>Signature Flavors</strong><br><img src="assets/flavors.png" width="100%"></td>
+<td><strong>Testimonials</strong><br><img src="assets/testimonials.png" width="100%"></td>
+</tr>
+</table>
 
 ---
-
-### ☕ About Section
-![About Page](assets/about.png)
-
----
-
-### 🍵 Signature Flavors
-![Flavors Section](assets/flavors.png)
-
----
-
-### 💬 Testimonials
-![Testimonials](assets/testimonials.png)
 
 ## 🛠️ Tech Stack
 
-- **Backend**     : Django 4.2+
-- **Frontend**    : HTML5, CSS3 (custom), Vanilla JavaScript
-- **Styling**     : Pure CSS with glassmorphism, gradients, IntersectionObserver animations
-- **Fonts**       : System fonts (Segoe UI, system-ui)
-- **Images**      : Optimized static files (lazy loading)
-- **No external UI libraries** — lightweight & fast
+| Layer         | Technology                              | Notes                                    |
+|---------------|-----------------------------------------|------------------------------------------|
+| Backend       | Django 4.2+                             | REST-ready structure                     |
+| Frontend      | HTML5, CSS3, Vanilla JavaScript         | No external UI libraries                 |
+| Styling       | Pure CSS (glassmorphism, gradients)     | Custom design, no Tailwind/Bootstrap     |
+| Animations    | CSS + Intersection Observer             | Lightweight & performant                 |
+| Fonts         | System fonts (Segoe UI, system-ui)      | Fast loading                             |
+| Images        | Optimized static files                  | Lazy loading supported                   |
+| Deployment    | Render / similar PaaS                   | Live at: https://chai-order-system-5.onrender.com |
 
 ---
 
