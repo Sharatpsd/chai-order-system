@@ -2,7 +2,7 @@
 
 A modern, cozy, and premium **Django web application** built for authentic chai lovers. Discover handcrafted flavors, place orders seamlessly, read heartfelt testimonials, and get in touch — all wrapped in a warm, dark, premium design inspired by real chai culture.
 
-![Hero Section](https://drive.google.com/uc?export=view&id=1uIEu6ULeuytYHhkWXEWFc_qDxMC_VLmS)
+![Landing Page](assets/landing.png)
 *(Beautiful hero with steaming chai vibe)*
 
 ---
