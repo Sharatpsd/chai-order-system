@@ -3,7 +3,7 @@
 **Premium Django web application for authentic chai lovers**  
 Modern, cozy, dark-themed platform to discover handcrafted chai flavors, read real customer stories, and place orders with warmth and elegance.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-brightgreen?style=for-the-badge&logo=vercel)](https://chai-order-system-5.onrender.com/)
+🔗 Live Demo: https://chai-order-system-5.onrender.com/
 
 ![Hero Banner](assets/landing.png)  
 *Steaming hot chai experience – premium dark UI with golden accents*
